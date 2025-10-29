@@ -3,9 +3,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="./main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> <script type="module" src="./main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="./main.js"></script>
     
     <title>Projeto - Vila Horizonte Infinito</title>
 </head>
@@ -44,6 +44,7 @@
         </div>
     </nav>
 
+
     <div class="container max-w-5xl mx-auto px-4 py-10">
 
         <div class="py-8">
@@ -51,25 +52,28 @@
             <p class="text-lg text-gray-500 font-mono mt-2">Uma obra-prima de design e conforto à beira-mar.</p>
         </div>
 
-        <div class="grid grid-cols-4 grid-rows-2 gap-4 h-96 md:h-[550px]">
+        <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[550px] space-y-4 md:space-y-0">
             
-            <div class="col-span-4 row-span-2 md:col-span-3 rounded-lg overflow-hidden">
+            <button data-image-src="./img/grid1.png" 
+                    class="open-custom-modal block col-span-1 row-span-1 md:col-span-3 md:row-span-2 rounded-lg overflow-hidden cursor-pointer focus:outline-none focus:ring-4 focus:ring-yellow-300 transition-transform duration-300 ease-in-out hover:scale-105">
                 <img src="./img/grid1.png" alt="Vista principal da Vila Horizonte Infinito" class="w-full h-full object-cover">
-            </div>
+            </button>
             
-            <div class="hidden md:block col-span-1 row-span-1 rounded-lg overflow-hidden">
+            <button data-image-src="./img/detalhe1.png" 
+                    class="open-custom-modal block col-span-1 row-span-1 md:col-span-1 md:row-span-1 rounded-lg overflow-hidden cursor-pointer focus:outline-none focus:ring-4 focus:ring-yellow-300 transition-transform duration-300 ease-in-out hover:scale-105">
                 <img src="./img/detalhe1.png" alt="Detalhe 1 do projeto" class="w-full h-full object-cover">
-            </div>
-            <div class="hidden md:block col-span-1 row-span-1 rounded-lg overflow-hidden">
+            </button>
+            <button data-image-src="./img/detalhe2.png" 
+                    class="open-custom-modal block col-span-1 row-span-1 md:col-span-1 md:row-span-1 rounded-lg overflow-hidden cursor-pointer focus:outline-none focus:ring-4 focus:ring-yellow-300 transition-transform duration-300 ease-in-out hover:scale-105">
                 <img src="./img/detalhe2.png" alt="Detalhe 2 do projeto" class="w-full h-full object-cover">
-            </div>
+            </button>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             
             <div class="md:col-span-2">
                 <h2 class="text-2xl font-sans font-semibold text-gray-800 mb-4">Sobre o Projeto</h2>
-                <div class="space-y-4 text-gray-700 font-serif"> <p>Concebida para harmonizar luxo e natureza, esta residência exclusiva oferece uma experiência de vida inigualável. Com vistas deslumbrantes para o oceano e ambientes perfeitamente integrados, cada detalhe foi cuidadosamente planejado para inspirar e encantar.</p>
+                <div class="space-y-4 text-gray-500 font-serif"> <p>Concebida para harmonizar luxo e natureza, esta residência exclusiva oferece uma experiência de vida inigualável. Com vistas deslumbrantes para o oceano e ambientes perfeitamente integrados, cada detalhe foi cuidadosamente planejado para inspirar e encantar.</p>
                     <p>A arquitetura moderna utiliza materiais naturais como madeira, pedra e vidro para criar uma sensação de fluidez entre os espaços internos e externos. A piscina de borda infinita se funde com o horizonte, proporcionando um espetáculo visual constante.</p>
                     <p>Viva a exclusividade de um lar onde o horizonte é o seu quintal.</p>
                 </div>
@@ -118,6 +122,16 @@
              </div>
         </div>
     </div>
+
+    <div id="custom-image-modal" class="hidden fixed inset-0 z-[999] bg-black bg-opacity-80 flex items-center justify-center p-4">
+        <div class="relative max-w-5xl max-h-full">
+            <button id="close-image-modal" class="absolute -top-10 right-0 text-white text-4xl leading-none font-bold hover:text-gray-300 transition-colors duration-200 focus:outline-none">&times;</button>
+            <img src="" alt="Imagem em tela cheia" id="modal-image-content" class="max-w-full max-h-[85vh] object-contain">
+        </div>
+    </div>
+
+
+ 
     
 </body>
 </html>
