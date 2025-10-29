@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    
+    <title>Projeto - Vila Horizonte Infinito</title>
+</head>
+<body class="bg-gray-50 text-gray-600">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container max-w-5xl mx-auto px-4 h-24 flex items-center justify-between">
+            
+            <div>
+                <a href="index.html#home"> <img src="./img/logo.png" width="100" alt="Logo da Empresa">
+                </a>
+            </div>
+    
+            <ul class="hidden md:flex items-center space-x-5">
+                <li><a href="index.html#reservar" class="text-sm text-gray-600 hover:text-gray-800 hover:underline">Como reservar</a></li>
+                <li><a href="index.html#sobre" class="text-sm text-gray-600 hover:text-gray-800 hover:underline">Sobre nós</a></li>
+                <li><a href="index.html#info" class="text-sm text-gray-600 hover:text-gray-800 hover:underline">Informações</a></li>
+                <li><a href="index.html#contato" class="text-sm text-gray-600 hover:text-gray-800 hover:underline">Contato</a></li>
+            </ul>
+    
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                </svg>
+            </button>
+    
+        </div>
+    
+        <div id="mobile-menu" class="hidden md:hidden absolute left-0 top-24 w-full bg-white shadow-lg">
+            <ul class="flex flex-col items-center space-y-2 p-4">
+                <li><a href="index.html#reservar" class="block w-full text-center text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 py-2 rounded-md">Como reservar</a></li>
+                <li><a href="index.html#sobre" class="block w-full text-center text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 py-2 rounded-md">Sobre nós</a></li>
+                <li><a href="index.html#info" class="block w-full text-center text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 py-2 rounded-md">Informações</a></li>
+                <li><a href="index.html#contato" class="block w-full text-center text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 py-2 rounded-md">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container max-w-5xl mx-auto px-4 py-10">
+
+        <div class="py-8">
+            <h1 class="text-4xl font-sans font-bold text-gray-800">Vila Horizonte Infinito</h1>
+            <p class="text-lg text-gray-500 font-mono mt-2">Uma obra-prima de design e conforto à beira-mar.</p>
+        </div>
+
+        <div class="grid grid-cols-4 grid-rows-2 gap-4 h-96 md:h-[550px]">
+            
+            <div class="col-span-4 row-span-2 md:col-span-3 rounded-lg overflow-hidden">
+                <img src="./img/grid1.png" alt="Vista principal da Vila Horizonte Infinito" class="w-full h-full object-cover">
+            </div>
+            
+            <div class="hidden md:block col-span-1 row-span-1 rounded-lg overflow-hidden">
+                <img src="./img/detalhe1.png" alt="Detalhe 1 do projeto" class="w-full h-full object-cover">
+            </div>
+            <div class="hidden md:block col-span-1 row-span-1 rounded-lg overflow-hidden">
+                <img src="./img/detalhe2.png" alt="Detalhe 2 do projeto" class="w-full h-full object-cover">
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            
+            <div class="md:col-span-2">
+                <h2 class="text-2xl font-sans font-semibold text-gray-800 mb-4">Sobre o Projeto</h2>
+                <div class="space-y-4 text-gray-700 font-serif"> <p>Concebida para harmonizar luxo e natureza, esta residência exclusiva oferece uma experiência de vida inigualável. Com vistas deslumbrantes para o oceano e ambientes perfeitamente integrados, cada detalhe foi cuidadosamente planejado para inspirar e encantar.</p>
+                    <p>A arquitetura moderna utiliza materiais naturais como madeira, pedra e vidro para criar uma sensação de fluidez entre os espaços internos e externos. A piscina de borda infinita se funde com o horizonte, proporcionando um espetáculo visual constante.</p>
+                    <p>Viva a exclusividade de um lar onde o horizonte é o seu quintal.</p>
+                </div>
+            </div>
+            
+            <div class="md:col-span-1 bg-gray-100 p-6 rounded-lg shadow-sm">
+                <h3 class="text-xl font-sans font-semibold text-gray-800 mb-4">Ficha Técnica</h3>
+                <ul class="space-y-3 font-mono text-sm">
+                    <li class="flex justify-between">
+                        <span class="text-gray-500">Localização:</span>
+                        <span class="font-semibold text-gray-800">Costa Esmeralda, BR</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-500">Estilo:</span>
+                        <span class="font-semibold text-gray-800">Moderno, Minimalista</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-500">Área:</span>
+                        <span class="font-semibold text-gray-800">450 m²</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-500">Ano:</span>
+                        <span class="font-semibold text-gray-800">2024</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-16">
+            <a href="index.html" class="hover:bg-yellow-400 text-yellow-900 bg-yellow-500 font-medium px-6 py-3 rounded-lg inline-flex items-center transition-colors duration-200">
+                <svg class="h-5 w-5 mr-2" data-slot="icon" fill="none" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path>
+                  </svg>
+                Ver todos os projetos
+            </a>
+        </div>
+
+    </div>
+
+    <div class="bg-gray-100 border-t border-gray-200">
+        <div class="container max-w-5xl mx-auto px-4 py-10 flex items-center justify-between">
+            <div><img src="./img/logo.png" width="100" class=""></div>
+             <div class="flex space-x-3">
+                 <a href=""><img src="./img/facebook.png" alt="Facebook" class="h-10 w-10"></a>
+                 <a href=""><img src="./img/instagram.png" alt="Instagram" class="h-10 w-10"></a>
+             </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     
     <title>Architect</title>
 </head>
 <body class="bg-gray-50 text-gray-600">
 
-    <div class="">
-        <div class="container max-w-5xl mx-auto px-4 h-24 flex items-center">
-            <div class=""><img src="./img/logo.png" width="100"></div>
-            <ul class="ml-auto flex items-center space-x-5">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container max-w-5xl mx-auto px-4 h-24 flex items-center justify-between">
+            
+            <div>
+                <a href="#home">
+                <img src="./img/logo.png" width="100" alt="Logo da Empresa">
+                </a>
+            </div>
+    
+            <ul class="hidden md:flex items-center space-x-5">
                 <li>
                     <a href="" class="text-sm text-gray-600 hover:text-gray-800 hover:underline">Como reservar</a>
                 </li>
@@ -27,12 +35,36 @@
                     <a href="" class="text-sm text-gray-600 hover:text-gray-800 hover:underline">Contato</a>
                 </li>
             </ul>
+    
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 12c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+                </svg>
+            </button>
+    
         </div>
-    </div>
+    
+        <div id="mobile-menu" class="hidden md:hidden absolute left-0 top-24 w-full bg-white shadow-lg">
+            <ul class="flex flex-col items-center space-y-2 p-4">
+                <li>
+                    <a href="" class="block w-full text-center text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 py-2 rounded-md">Como reservar</a>
+                </li>
+                <li>
+                    <a href="" class="block w-full text-center text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 py-2 rounded-md">Sobre nós</a>
+                </li>
+                <li>
+                    <a href="" class="block w-full text-center text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 py-2 rounded-md">Informações</a>
+                </li>
+                <li>
+                    <a href="" class="block w-full text-center text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 py-2 rounded-md">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 
     <!--banner-->
-    <div class="w-full aspect-video sm:aspect-[3.5/1] md:aspect-[3.11/1] lg:aspect-[3.11/1] "
+    <div id="home" class="w-full aspect-video sm:aspect-[3.5/1] md:aspect-[3.11/1] lg:aspect-[3.11/1] "
      style="background-image: url('./img/banner.png'); background-size: cover; background-position: center;">
         <div class="container max-w-5xl mx-auto px-4 h-full flex items-center justify-center">
             <div>
@@ -42,13 +74,13 @@
                 </div>
                 <div class="mt-5">
                     <form action="" class="grid grid-cols-2 lg:grid-cols-3 gap-4">
-                        <select class="bg-gray-50 border px-3 py-2 border-gray-300 rounded text-gray-600">
+                        <select class="hover:bg-gray-200 bg-gray-50 border px-3 py-2 border-gray-300 rounded text-gray-600">
                             <option value="">Escolha o local</option>
                         </select>
-                        <select class="bg-gray-50 border px-3 py-2 border-gray-300 rounded text-gray-600">
+                        <select class="hover:bg-gray-200 bg-gray-50 border px-3 py-2 border-gray-300 rounded text-gray-600">
                             <option value="">Escolha o estilo</option>
                         </select>
-                        <button class="col-span-2 lg:col-span-1 justify-center items-center bg-yellow-500 font-medium px-3 py-2 rounded inline-flex">
+                        <button class="hover:bg-yellow-400 col-span-2 lg:col-span-1 justify-center items-center bg-yellow-500 font-medium px-3 py-2 rounded inline-flex">
                             <svg class="h-4 w-4 mt-1 mr-2" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>
                               </svg>
@@ -72,7 +104,7 @@
                     <div class="text-sm text-gray-400 font-medium mt-4 font-mono">Uma obra-prima de design e conforto.</div>
                     <div class="text-sm text-gray-400 font-medium mt-4 font-serif"><p>Concebida para harmonizar luxo e natureza, esta residência exclusiva oferece uma experiência de vida inigualável. Com vistas deslumbrantes e ambientes integrados, cada detalhe foi cuidadosamente planejado para inspirar e encantar. </p></div>
                     <div class="text-sm text-gray-400 font-medium mt-4 font-serif"><p>Viva a exclusividade de um lar onde o horizonte é o seu quintal.</p></div>
-                    <a href="" class="text-yellow-900 bg-yellow-500 font-medium px-3 py-2 rounded inline-flex mt-3">
+                    <a href="" class="hover:bg-yellow-400 text-yellow-900 bg-yellow-500 font-medium px-3 py-2 rounded inline-flex mt-3">
                         
                         Criar Projeto
                         <svg class="h-5 w-5 ml-2 mt-0.5" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -126,27 +158,41 @@
     <div class="mt-16 bg-gray-50">
         <div class="container max-w-5xl mx-auto px-4">
             <h3 class="text-2xl text-center text-gray-400 font-medium font-sans mb-5">Conheça mais Projetos</h3>
-            <div class="md:grid md:grid-cols-4 md:grid-rows-2 md:gap-6 h-96 space-y-6 md:space-y-0">
-                <div class="relative md:col-span-2 md:row-span-2 rounded-lg overflow-hidden">
+            
+            <div class="md:grid md:grid-cols-4 md:grid-rows-2 md:gap-6 md:h-96 space-y-6 md:space-y-0">
+                
+                <a href="projeto-vila.html" 
+                   class="block relative md:col-span-2 md:row-span-2 rounded-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
+                    
                     <div class="absolute pl-4 pb-4 text-white z-20 bottom-0">Vila Horizonte Infinito</div>
-                    <img src="./img/image-shadow.png" class="bottom-0 z-10 absolute left-0 right-0 w-full  h-16">
+                    <img src="./img/image-shadow.png" class="bottom-0 z-10 absolute left-0 right-0 w-full h-16">
                     <img src="./img/grid1.png" class="w-full h-full object-cover">
-                </div>
-                <div class="relative md:col-span-2 rounded-lg overflow-hidden">
+                </a>
+                
+                <a href="projeto-palacio.html" 
+                   class="block relative md:col-span-2 rounded-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
+                    
                     <div class="absolute pl-4 pb-4 text-white z-20 bottom-0">Palácio Belle Époque</div>
-                    <img src="./img/image-shadow.png" class="bottom-0 z-10 absolute left-0 right-0 w-full  h-16">
+                    <img src="./img/image-shadow.png" class="bottom-0 z-10 absolute left-0 right-0 w-full h-16">
                     <img src="./img/grid2.png" class="w-full h-full object-cover">
-                </div>
-                <div class="relative rounded-lg overflow-hidden">
+                </a>
+                
+                <a href="projeto-brooklyn.html" 
+                   class="block relative rounded-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
+                    
                     <div class="absolute pl-4 pb-4 text-white z-20 bottom-0">Residência Brooklyn Loft</div>
-                    <img src="./img/image-shadow.png" class="bottom-0 z-10 absolute left-0 right-0 w-full  h-16">
+                    <img src="./img/image-shadow.png" class="bottom-0 z-10 absolute left-0 right-0 w-full h-16">
                     <img src="./img/grid3.png" class="w-full h-full object-cover">
-                </div>
-                <div class="relative rounded-lg overflow-hidden">
+                </a>
+                
+                <a href="projeto-chale.html" 
+                   class="block relative rounded-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
+                    
                     <div class="absolute pl-4 pb-4 text-white z-20 bottom-0">Chalé da Montanha Sereno</div>
-                    <img src="./img/image-shadow.png" class="bottom-0 z-10 absolute left-0 right-0 w-full  h-16">
+                    <img src="./img/image-shadow.png" class="bottom-0 z-10 absolute left-0 right-0 w-full h-16">
                     <img src="./img/grid4.png" class="w-full h-full object-cover">
-                </div>
+                </a>
+    
             </div>
         </div>
     </div>
@@ -155,13 +201,13 @@
     <div class="mt-10 bg-gray-50">
         <div class="container max-w-5xl mx-auto py-5 px-4 flex justify-center">
             <form action="" class="grid grid-cols-2 lg:grid-cols-3 gap-4">
-                <select class="bg-gray-50 border px-3 py-2 border-gray-300 rounded text-gray-600">
+                <select class="hover:bg-gray-200 bg-gray-50 border px-3 py-2 border-gray-300 rounded text-gray-600">
                     <option value="">Escolha o local</option>
                 </select>
-                <select class="bg-gray-50 border px-3 py-2 border-gray-300 rounded text-gray-600">
+                <select class="hover:bg-gray-200 bg-gray-50 border px-3 py-2 border-gray-300 rounded text-gray-600">
                     <option value="">Escolha o estilo</option>
                 </select>
-                <button class="col-span-2 lg:col-span-1 justify-center items-center bg-yellow-500 font-medium px-3 py-2 rounded inline-flex">
+                <button class="hover:bg-yellow-400 col-span-2 lg:col-span-1 justify-center items-center bg-yellow-500 font-medium px-3 py-2 rounded inline-flex">
                     <svg class="h-4 w-4 mt-1 mr-2" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>
                       </svg>
@@ -183,6 +229,5 @@
         </div>
     </div>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 </body>
 </html>
